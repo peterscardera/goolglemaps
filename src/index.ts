@@ -1,6 +1,17 @@
 import { User } from "./Users"
 import { Company } from "./Company"
-const user = new User()
-console.log(user)
+import { CustomMap } from "./customMap"
+//https://www.npmjs.com/package/@types/googlemaps  search @types/googlemaps FOR THE TYPES DEFINITION
+// const user = new User()
+// console.log(user)
+// const company = new Company()
+// console.log(company)
+
+const user = new User();
 const company = new Company()
-console.log(company)
+
+const customMap = new CustomMap("maps")
+
+
+customMap.addMarker(user)
+customMap.addMarker(company)
